@@ -7,10 +7,10 @@
 activate :directory_indexes
 activate :blog do |blog|
   # blog.prefix = "blog"
-  blog.permalink = ":year/:month/:day/:title/index.html"
-  blog.sources = "posts/:year-:month-:day-:title/index.html"
+  blog.permalink = ":title/index.html"
+  blog.sources = "posts/:year-:month-:day-:title.html"
   blog.taglink = "tags/:tag/index.html"
-  # blog.layout = "layout"
+  blog.layout = "layouts/default"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   blog.year_link = ":year/index.html"

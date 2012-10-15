@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/wndxlori/bootstrap-sass.git
+  revision: 2803b00c1ddf2c981624eac9998c26d7347232c2
+  specs:
+    bootstrap-sass (2.1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -116,6 +122,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass!
   builder (~> 3.0.0)
   middleman (~> 3.0.5)
   middleman-blog (~> 3.1.1)

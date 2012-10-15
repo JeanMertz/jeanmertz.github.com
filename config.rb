@@ -4,6 +4,16 @@
 
 # Time.zone = "UTC"
 
+# Syntax Highlighting
+require 'rack/codehighlighter'
+require "pygments"
+use Rack::Codehighlighter,
+  :pygments,
+  element: "pre>code",
+  pattern: /\A:::([-_+\w]+)\s*\n/,
+  markdown: true,
+  options: { linenos: 'table' }
+
 activate :directory_indexes
 activate :blog do |blog|
   # blog.prefix = "blog"

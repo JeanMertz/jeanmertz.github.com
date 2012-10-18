@@ -38,6 +38,7 @@ end
 
 page "/feed.xml", layout: false
 page "/index.html", layout: :index
+page "posts/*", layout: :article
 
 ###
 # Compass

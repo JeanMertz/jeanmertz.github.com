@@ -1,0 +1,13 @@
+!!!
+= partial 'partials/head'
+%body#article
+  #about-me
+  #container
+    #viewport
+      #content
+        .row
+          %article
+            %header
+              %h1.instapaper_title= current_article.title
+
+            %section.instapaper_body= yield

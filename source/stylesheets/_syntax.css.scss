@@ -11,6 +11,7 @@
   @media (min-width: 768px) { margin-top: 20px; }
   margin-bottom: 20px;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wrap-button {
@@ -31,8 +32,6 @@ table.highlighttable {
   .code pre {
     @extend [class*="span"];
     @extend .span8;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 }
 

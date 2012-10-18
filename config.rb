@@ -20,7 +20,7 @@ activate :blog do |blog|
   blog.permalink = ":title/index.html"
   blog.sources = "posts/:year-:month-:day-:title.html"
   blog.taglink = "tags/:tag/index.html"
-  blog.layout = "layouts/default"
+  blog.layout = "layouts/index"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   blog.year_link = ":year/index.html"
@@ -36,8 +36,8 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-page "/feed.xml", :layout => false
-page "/index.html", layout: :default
+page "/feed.xml", layout: false
+page "/index.html", layout: :index
 
 ###
 # Compass
@@ -89,9 +89,7 @@ page "/index.html", layout: :default
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration

@@ -5,32 +5,63 @@
   @include box-shadow(#55463C 0 0 5px);
   background: #28211C;
   width: 1000%;
-  padding: 20px 0;
+  padding: 10px 0 20px 0;
   margin-left: -500%;
   padding-left: 500%;
-  margin-top: 20px;
+  @media (min-width: 768px) { margin-top: 20px; }
   margin-bottom: 20px;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.wrap-button {
+  @extend .visible-phone;
+  height: 15px;
+  line-height: 0.7em;
+  font-size: 0.7em;
+  text-align: right;
+  a { color: lighten($bgDark, 20%); }
+}
+
+
+table.highlighttable {
+  @extend [class*="span"];
+  @extend .span8;
+  margin-left: 0;
+
+  .code pre {
+    @extend [class*="span"];
+    @extend .span8;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 // Don't use any fancy width tricks on mobile devices
 @media (max-width: 767px) {
   .highlight-wrapper {
     width: inherit;
-    margin-left: 0;
-    padding-left: 20px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 0;
   }
 }
 
 // Line numbers
 .linenos {
-  width: 10%;
+  width: 40px;
   text-align: right;
 
   .linenodiv > pre {
     color: #55463C;
     padding-right: 10px;
   }
+
+  // hide line numbers on mobile
+  @media (max-width: 767px) { display: none; }
+}
+
+.code {
+  @media (max-width: 767px) { padding: 0 10px; }
 }
 
 // Code blocks
@@ -44,9 +75,12 @@ pre {
   padding: 0;
   margin: 0;
   word-break: break-all;
-  word-wrap: break-word;
+  word-wrap: normal;
   white-space: pre;
-  white-space: pre-wrap;
+
+  &.wrap {
+    white-space: pre-wrap;
+  }
 }
 
 // Inline code blocks

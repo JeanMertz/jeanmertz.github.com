@@ -16,11 +16,18 @@ He lay on his armour-like back, and if he lifted his head a little he could see 
 
       included do
         helper_method :can_start_new_batch?
+        validates :street, :number, :postalcode, :city, :country, presence: true
+        encrypted_attribute :encrypted_number, hash: true
+
         private :can_start_new_batch?
       end
 
       def can_start_new_batch?
         !Batch.has_any_running?
+      end
+
+      def importing
+        bank_statement = bank_statements_import.bank_statements.create(bank_statement_attributes)
       end
     end
 

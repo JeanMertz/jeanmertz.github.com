@@ -1,0 +1,8 @@
+.row
+  %article
+    =#link_to article.date.strftime('%d.%m.%y'), article, class: 'meta'
+
+    %header
+      %h1.instapaper_title= link_to article.title, article
+
+    %section.instapaper_body= article.body

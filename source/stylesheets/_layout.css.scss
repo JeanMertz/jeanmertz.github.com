@@ -1,0 +1,19 @@
+html, body {
+  min-height: 140%;
+  overflow-x: hidden;
+  background: #FBFAF4;
+}
+
+#container {
+  @extend .container;
+}
+
+#viewport {
+  @extend .row;
+}
+
+#content {
+  @extend [class*="span"];
+  @extend .span10;
+}
+

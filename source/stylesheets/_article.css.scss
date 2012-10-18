@@ -1,0 +1,23 @@
+article {
+  @extend [class*="span"];
+  @extend .offset2;
+  @extend .span8;
+
+  header {
+    margin-top: 20px;
+    vertical-align: middle;
+    margin-bottom: 30px;
+
+    h1 {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-weight: 300;
+      font-size: $articleTitleSize;
+    }
+  }
+
+  section {
+    font-family: 'Arvo', serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+}

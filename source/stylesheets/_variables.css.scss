@@ -1,3 +1,13 @@
 // Custom
 $articleTitleSize: 2.5em;
 $bgDark: #28211C;
+
+// Inverted navbar
+$navbarInverseBackground:                $bgDark;
+$navbarInverseBackgroundHighlight:       lighten($bgDark, 5%);
+$navbarInverseBorder:                    lighten($bgDark, 10%);
+
+// Buttons
+// -------------------------
+$btnInverseBackground:              $bgDark;
+$btnInverseBackgroundHighlight:     lighten($bgDark, 10%);

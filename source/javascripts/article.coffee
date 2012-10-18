@@ -1,4 +1,9 @@
 $ ->
+  $('#actionbar').tooltip
+    selector: "a[rel=tooltip]"
+    placement: 'bottom'
+    delay: { show: 750, hide: 0 }
+
   $('.highlight-wrapper').each ->
     button = '<div class="wrap-button"><a href="#">wrap</a></div>'
     $(@).before(button)

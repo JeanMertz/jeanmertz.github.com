@@ -4,6 +4,10 @@ html, body {
   background: #FBFAF4;
 }
 
+body {
+  @media (max-width: 767px) { padding-bottom: 71px; }
+}
+
 #container {
   @extend .container;
 }
@@ -17,3 +21,7 @@ html, body {
   @extend .span10;
 }
 
+aside {
+  @extend [class*="span"];
+  @extend .span2;
+}

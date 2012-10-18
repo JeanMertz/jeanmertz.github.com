@@ -1,0 +1,23 @@
+.row
+  #actionbar
+    .btn-group
+      // Back home
+      %a.btn.btn-inverse.btn-small{ href: '/', rel: 'tooltip', title: 'back' }
+        %i.icon-arrow-left.icon-white
+
+      // Share article
+      %a.btn.btn-inverse.btn-small{ href: '#', rel: 'tooltip', title: 'share' }
+        %i.icon-share.icon-white
+
+      // Read later
+      %a#read-later.btn.btn-inverse.btn-small.dropdown-toggle{ href: '#', rel: 'tooltip', title: 'read later', data: { toggle: 'dropdown' } }
+        %i.icon-time.icon-white
+      %ul.dropdown-menu.pull-right
+        %li
+          %a{ href: '#' } Instapaper
+        %li
+          %a{ href: '#' } Readability
+        %li
+          %a{ href: '#' } Pocket
+        %li
+          %a{ href: '#' } Email

@@ -1,0 +1,25 @@
+#aside.navbar.navbar-fixed-bottom.navbar-inverse
+  .navbar-inner
+    .container
+      %ul.nav
+        %li
+          %a{ href: '/', rel: 'tooltip', title: 'back' }
+            %i.icon-arrow-left.icon-white
+        %li.divider-vertical
+        %li
+          %a{ href: '#', rel: 'tooltip', title: 'share' }
+            %i.icon-share.icon-white
+        %li.divider-vertical
+        %li.dropdown
+          %a.dropdown-toggle{ href: '#', rel: 'tooltip', title: 'read later', data: { toggle: 'dropdown' } }
+            %i.icon-time.icon-white
+          %ul.dropdown-menu.pull-right
+            %li
+              %a{ href: '#' } Instapaper
+            %li
+              %a{ href: '#' } Readability
+            %li
+              %a{ href: '#' } Pocket
+            %li
+              %a{ href: '#' } Email
+        %li.divider-vertical

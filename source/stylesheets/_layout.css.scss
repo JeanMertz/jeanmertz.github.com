@@ -8,14 +8,6 @@ body {
   @media (max-width: 767px) { padding-bottom: 71px; }
 }
 
-// iOS only styling
-@media (max-width: 1024px) {
-  *:not(html) {
-    // fix for flickering when zooming in/out
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-}
-
 #container {
   @extend .container;
 }

@@ -76,6 +76,8 @@ pre {
   word-break: break-all;
   word-wrap: normal;
   white-space: pre;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   &.wrap {
     white-space: pre-wrap;

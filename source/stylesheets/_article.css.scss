@@ -11,7 +11,13 @@ article {
     h1 {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-weight: 300;
+
+      // Resize title based on screen width
       font-size: $articleTitleSize;
+      @media (max-width: 1199px){ font-size: $articleTitleSize - 0.35em; }
+      @media (max-width: 979px) { font-size: $articleTitleSize - 0.75em; }
+      @media (max-width: 767px) { font-size: $articleTitleSize - 0.50em; }
+      @media (max-width: 480px) { font-size: $articleTitleSize - 0.75em; }
     }
   }
 

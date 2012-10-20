@@ -12,9 +12,9 @@
 <link href="/images/apple-touch-icon-114x114-ff0e2826.png" rel="apple-touch-icon" sizes="114x114">
 <link href="/images/apple-touch-icon-144x144-67ddc979.png" rel="apple-touch-icon" sizes="144x144">
 <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono%7CArvo:400,700,400italic,700italic%7COswald%7CYanone+Kaffeesatz:300" media="screen" rel="stylesheet" type="text/css">
-<link href="/stylesheets/screen-77b10d40.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen-a0c8e175.css" media="screen" rel="stylesheet" type="text/css">
 <link href="/images/favicon-1431c46b.png" rel="icon" type="image/png">
-<script src="/javascripts/application-1e724671.js" type="text/javascript"></script><script src="/javascripts/article-c7bfbc2e.js" type="text/javascript"></script>
+<script src="/javascripts/application-520d8e7b.js" type="text/javascript"></script><script src="/javascripts/article-c7bfbc2e.js" type="text/javascript"></script>
 </head>
 <body id="article">
   <div id="about-me"></div>
@@ -23,7 +23,7 @@
       <div id="content">
         <div class="row">
           <article><header><h1 class="instapaper_title">Therapeutic Refactoring, food for thought, hard to digest</h1>
-            </header><section class="instapaper_body"><p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+            </header><section class="instapaper_body lh3 fs3"><p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
 
 <p>Inline also works the same <code>def test_method; echo "string"; end</code>. As you can see.</p>
 
@@ -114,50 +114,109 @@
 </div>
   </div>
   <div class="navbar navbar-fixed-bottom navbar-inverse" id="aside">
-      <div class="navbar-inner">
-        <div class="container">
-          <ul class="nav">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
 <li>
-              <a href="/" rel="tooltip" title="back">
-                <i class="icon-arrow-left icon-white"></i>
-              </a>
-            </li>
-            <li class="divider-vertical">
-            <li>
-              <a href="#" rel="tooltip" title="share">
-                <i class="icon-share icon-white"></i>
-              </a>
-            </li>
-            <li class="divider-vertical">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" rel="tooltip" title="read later">
-                <i class="icon-time icon-white"></i>
-              </a>
-              <ul class="dropdown-menu pull-right">
+          <a href="/" id="back-button">
+            <i class="icon-arrow-left icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li>
+          <a href="/arrrrcamp-food-for-thought-difficult-to-digest/index.html" id="refresh-button">
+            <i class="icon-refresh icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="share-dropdown">
+            <i class="icon-share icon-white"></i>
+          </a>
+          <ul class="dropdown-menu pull-right">
 <li>
-                  <a href="#">Instapaper</a>
-                </li>
-                <li>
-                  <a href="#">Readability</a>
-                </li>
-                <li>
-                  <a href="#">Pocket</a>
-                </li>
-                <li>
-                  <a href="#">Email</a>
-                </li>
-              </ul>
-</li>
-            <li class="divider-vertical">
-            <li>
-              <a href="/arrrrcamp-food-for-thought-difficult-to-digest/index.html" id="refresh-button" rel="tooltip" title="share">
-                <i class="icon-refresh icon-white"></i>
-              </a>
+              <a href="#">Twitter</a>
             </li>
-            <li class="divider-vertical">
+            <li>
+              <a href="#">App.net</a>
+            </li>
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">Google+</a>
+            </li>
           </ul>
+</li>
+        <li class="divider-vertical">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="read-later-dropdown">
+            <i class="icon-time icon-white"></i>
+          </a>
+          <ul class="dropdown-menu pull-right">
+<li>
+              <a href="#">Instapaper</a>
+            </li>
+            <li>
+              <a href="#">Readability</a>
+            </li>
+            <li>
+              <a href="#">Pocket</a>
+            </li>
+            <li>
+              <a href="#">Email</a>
+            </li>
+            <li>
+              <a href="#">Safari</a>
+            </li>
+          </ul>
+</li>
+        <li class="divider-vertical">
+        <li>
+          <a href="#" id="toggle-content-tools">
+            <i class="icon-font icon-white"></i>
+          </a>
+        </li>
+      </ul>
 </div>
-      </div>
-    </div>
+  </div>
+</div>
+<div class="navbar navbar-fixed-top navbar-inverse" id="content-tools">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+<li>
+          <a href="#" id="dark-mode-button">
+            <i class="icon-adjust icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li>
+          <a href="#" id="text-size-button">
+            <i class="icon-zoom-in icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li>
+          <a href="#" id="line-height-button">
+            <i class="icon-text-height icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li>
+          <a href="#" id="wrap-code-button">
+            <i class="icon-align-left icon-white"></i>
+          </a>
+        </li>
+        <li class="divider-vertical">
+        <li>
+          <a href="#" id="full-screen-button">
+            <i class="icon-resize-full icon-white"></i>
+          </a>
+        </li>
+      </ul>
+</div>
+  </div>
+</div>
 </body>
 </html>

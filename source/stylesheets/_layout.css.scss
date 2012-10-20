@@ -31,7 +31,17 @@ body {
 aside {
   @extend [class*="span"];
   @extend .span2;
+}
 
+body#article {
+  aside,
+  article header h1,
+  article section p,
+  article table.highlighttable,
+  article .wrap-button,
+  article div.highlight-wrapper {
+    opacity: 0; // hide initially, fade in with js/css
+  }
 }
 
 div#homescreen-instructions {

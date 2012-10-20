@@ -13,3 +13,8 @@ $ ->
     if /^\/.*/.test($(@).attr('href'))
       e.preventDefault()
       window.location = $(@).attr('href')
+  # Remove the 'back' button when not in web-app (already present)
+  # TODO: What about iPhone 5 height?
+  if window.innerHeight < 460
+    $('#back-button').parent('li').remove()
+

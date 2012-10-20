@@ -1,4 +1,7 @@
 #= require 'lib/_jquery.min'
+#= require 'lib/_jquery-ui.min'
+#= require 'lib/_jquery.style'
+#= require 'lib/_jquery.animate-enhanced.min'
 #= require 'bootstrap/_bootstrap'
 #= require '_syntax'
 
@@ -54,3 +57,22 @@ $ ->
 
 
 
+  # Display content tools bar
+  toggleContentTools = ->
+    if $('#content-tools').css('top') isnt '0px'
+      $('#content-tools').style('display', 'inherit', 'important')
+      $('#content-tools').animate { top: '0px' }
+      $('body').animate { marginTop: 40 }
+    else
+      $('#content-tools').animate { top: '-71px' }, ->
+        $(@).style('display', 'none', 'important')
+      $('body').animate { marginTop: 0 }
+
+  $('#toggle-content-tools').on 'click', (e) ->
+    e.preventDefault()
+    toggleContentTools()
+
+  # Switch to dark mode
+  $('#dark-mode-button').on 'click', (e) ->
+    e.preventDefault()
+    $('body').toggleClass('dark-mode')

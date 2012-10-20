@@ -1,11 +1,16 @@
 html, body {
   min-height: 140%;
   overflow-x: hidden;
-  background: #FBFAF4;
 }
 
 body {
+  background: #FBFAF4;
   @media (max-width: 767px) { padding-bottom: 71px; }
+
+  &.dark-mode {
+    background: #171310;
+    color: darken(#FBFAF4, 50%);
+  }
 }
 
 #container {

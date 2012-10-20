@@ -6,6 +6,10 @@
   position: fixed;
 }
 
+div#content-tools {
+  top: -71px
+}
+
 aside {
   @extend .hidden-phone;
 

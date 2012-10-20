@@ -83,6 +83,19 @@ $ ->
     else  if el.hasClass('fs4') then el.removeClass('fs4').addClass('fs5')
     else  if el.hasClass('fs5') then el.removeClass('fs5').addClass('fs1')
 
+
+
+  # Resize line height
+  $('#line-height-button').on 'click', (e) ->
+    e.preventDefault()
+    el = $('article section')
+    if el.hasClass('lh1') then el.removeClass('lh1').addClass('lh2')
+    else  if el.hasClass('lh2') then el.removeClass('lh2').addClass('lh3')
+    else  if el.hasClass('lh3') then el.removeClass('lh3').addClass('lh4')
+    else  if el.hasClass('lh4') then el.removeClass('lh4').addClass('lh5')
+    else  if el.hasClass('lh5') then el.removeClass('lh5').addClass('lh1')
+
+
   # Switch to dark mode
   $('#dark-mode-button').on 'click', (e) ->
     e.preventDefault()

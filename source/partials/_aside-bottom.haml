@@ -7,7 +7,9 @@
             %i.icon-arrow-left.icon-white
         %li.divider-vertical
         %li
-          %a{ href: '#', rel: 'tooltip', title: 'share' }
+          %a#refresh-button{ href: "/#{request.path}" }
+            %i.icon-refresh.icon-white
+        %li.divider-vertical
             %i.icon-share.icon-white
         %li.divider-vertical
         %li.dropdown
@@ -24,6 +26,4 @@
               %a{ href: '#' } Email
         %li.divider-vertical
         %li
-          %a#refresh-button{ href: "/#{request.path}", rel: 'tooltip', title: 'share' }
-            %i.icon-refresh.icon-white
         %li.divider-vertical

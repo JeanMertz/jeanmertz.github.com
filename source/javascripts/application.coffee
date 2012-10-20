@@ -17,6 +17,15 @@ $ ->
       e.preventDefault()
       window.location = $(@).attr('href')
 
+
+
+  # Fix issue with dropdown menus on iOS
+  # https://github.com/twitter/bootstrap/issues/4550#issuecomment-8879600
+  $('a.dropdown-toggle, .dropdown-menu a').on 'touchstart', (e) ->
+    e.stopPropagation()
+
+
+
   # Wrap all code blocks on the page...
   $('a#wrap-code-button').on 'click', (e) ->
     e.preventDefault()

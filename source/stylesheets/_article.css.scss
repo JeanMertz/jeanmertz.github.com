@@ -22,8 +22,14 @@ article {
   }
 
   section {
+    &.fs1 { font-size: 1.00em; }
+    &.fs2 { font-size: 1.15em; }
+    &.fs3 { font-size: 1.30em; }
+    &.fs4 { font-size: 1.45em; }
+    &.fs5 { font-size: 1.60em; }
+
     font-family: 'Arvo', serif;
-    font-size: 1.3em;
     line-height: 1.5em;
+    @extend .fs3;
   }
 }

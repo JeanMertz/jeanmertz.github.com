@@ -72,6 +72,17 @@ $ ->
     e.preventDefault()
     toggleContentTools()
 
+
+  # Resize text
+  $('#text-size-button').on 'click', (e) ->
+    e.preventDefault()
+    el = $('article section')
+    if el.hasClass('fs1') then el.removeClass('fs1').addClass('fs2')
+    else  if el.hasClass('fs2') then el.removeClass('fs2').addClass('fs3')
+    else  if el.hasClass('fs3') then el.removeClass('fs3').addClass('fs4')
+    else  if el.hasClass('fs4') then el.removeClass('fs4').addClass('fs5')
+    else  if el.hasClass('fs5') then el.removeClass('fs5').addClass('fs1')
+
   # Switch to dark mode
   $('#dark-mode-button').on 'click', (e) ->
     e.preventDefault()

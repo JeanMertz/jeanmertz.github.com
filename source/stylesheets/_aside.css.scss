@@ -5,6 +5,22 @@
   margin-left: 0;
   position: fixed;
 
+  .navbar-inner { text-align:center; }
+  .nav {
+    margin: 0;
+    float: none;
+    & > li {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      &.divider-vertical {
+        margin: 0 8px;
+        @media screen and (orientation: landscape) { margin: 0 20px; }
+      }
+    }
+    .dropdown-menu { text-align: left; }
+  }
+
   // mobile buttons
   #wrap-code-button.disabled { opacity: 0.3; }
 }

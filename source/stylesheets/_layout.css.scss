@@ -32,6 +32,33 @@ aside {
   @extend [class*="span"];
   @extend .span2;
 
+
+div#homescreen-instructions {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(#FBFAF4, 0.9);
+  padding: 20px;
+  font-family: 'Arvo', serif;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-weight: 300;
+
+  h4 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  li {
+    line-height: 1.3em;
+    margin-top: 1em;
+  }
+}
+
 #exit-full-screen-button {
   display: none;
   position: fixed;

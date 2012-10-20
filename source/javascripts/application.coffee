@@ -85,6 +85,35 @@ $ ->
     toggleContentTools()
 
 
+
+  # Full screen view
+  toggleAside = ->
+    if $('#aside').css('bottom') isnt '0px'
+      $('#aside').style('display', 'inherit', 'important')
+      $('#aside').animate { bottom: '-71px' }
+      # $('body').animate { paddingBotom: 71 }
+    else
+      $('#aside').animate { bottom: '-71px' }, ->
+        $(@).style('display', 'none', 'important')
+      # $('body').animate { paddingBottom: 0 }
+
+  $('#full-screen-button').on 'click', (e) ->
+    e.preventDefault()
+    toggleContentTools()
+    toggleAside()
+    $('<a href="#" id="exit-full-screen-button"></a>')
+      .append('<i class="icon-resize-small"></i>')
+      .appendTo('body')
+      .toggle(200)
+
+  $(document).on 'click', '#exit-full-screen-button', (e) ->
+    e.preventDefault()
+    toggleContentTools()
+    toggleAside()
+    $(@).toggle 200, -> $(@).remove()
+
+
+
   # Resize text
   $('#text-size-button').on 'click', (e) ->
     e.preventDefault()

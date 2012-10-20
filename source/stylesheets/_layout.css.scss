@@ -10,6 +10,8 @@ body {
   &.dark-mode {
     background: #171310;
     color: darken(#FBFAF4, 50%);
+
+    #exit-full-screen-button i { @extend .icon-white; }
   }
 }
 
@@ -29,4 +31,10 @@ body {
 aside {
   @extend [class*="span"];
   @extend .span2;
+
+#exit-full-screen-button {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
 }

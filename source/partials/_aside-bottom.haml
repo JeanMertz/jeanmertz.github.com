@@ -10,7 +10,18 @@
           %a#refresh-button{ href: "/#{request.path}" }
             %i.icon-refresh.icon-white
         %li.divider-vertical
+        %li.dropdown
+          %a#share-dropdown.dropdown-toggle{ href: '#', data: { toggle: 'dropdown' } }
             %i.icon-share.icon-white
+          %ul.dropdown-menu.pull-right
+            %li
+              %a{ href: '#' } Twitter
+            %li
+              %a{ href: '#' } App.net
+            %li
+              %a{ href: '#' } Facebook
+            %li
+              %a{ href: '#' } Google+
         %li.divider-vertical
         %li.dropdown
           %a.dropdown-toggle{ href: '#', rel: 'tooltip', title: 'read later', data: { toggle: 'dropdown' } }

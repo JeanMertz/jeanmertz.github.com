@@ -16,6 +16,18 @@ $ ->
     if /^\/.*/.test($(@).attr('href'))
       e.preventDefault()
       window.location = $(@).attr('href')
+
+  # Wrap all code blocks on the page...
+  $('a#wrap-code-button').on 'click', (e) ->
+    e.preventDefault()
+    $('.highlight-wrapper td.code pre').each -> $(@).toggleClass('wrap')
+
+  # ... or disable the button if no code blocks are present
+  if $('.highlight-wrapper td.code pre').length is 0
+    $('a#wrap-code-button').addClass('disabled')
+
+
+
   # Remove the 'back' button when not in web-app (already present)
   # TODO: What about iPhone 5 height?
   if window.innerHeight < 460

@@ -1,9 +1,12 @@
 // bottom bar
-#aside {
+#aside, #content-tools {
   @extend .visible-phone;
   margin-right: 0;
   margin-left: 0;
   position: fixed;
+
+  // mobile buttons
+  #wrap-code-button.disabled { opacity: 0.3; }
 }
 
 div#content-tools {
